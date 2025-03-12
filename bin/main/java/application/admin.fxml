@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.AdminController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Patient List">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="patientTable" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="colPatientUsername" prefWidth="300.0" text="Username" />
+                            <TableColumn fx:id="colPatientPassword" minWidth="0.0" prefWidth="299.0" text="Password" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+            <Tab text="Doctor List">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="doctorTable" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="colDoctorUsername" prefWidth="299.0" text="Username" />
+                            <TableColumn fx:id="colDoctorPassword" prefWidth="300.0" text="Password" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab fx:id="appointmentList" text="Appointment List">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="appointmentTable" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="colAppointmentDoctor" prefWidth="206.0" text="Doctor" />
+                            <TableColumn fx:id="colAppointmentPatient" prefWidth="202.0" text="Patient" />
+                              <TableColumn fx:id="colAppointmentDate" prefWidth="191.0" text="Date" />
+                              <TableColumn fx:id="colAppointmentDate1" prefWidth="191.0" text="Date" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <TextField fx:id="usernameField" promptText="Username" />
+            <TextField fx:id="passwordField" promptText="Password" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleAddDoctor" text="Add Doctor" />
+            <Button mnemonicParsing="false" onAction="#handleAddPatient" text="Add Patient" />
+            <Button mnemonicParsing="false" onAction="#handleDeleteUser" text="Delete User" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,59 @@
+/* Genel Stil */
+.root {
+    -fx-background-color: #F4F4F4;
+    -fx-font-family: "Arial";
+}
+
+/* Buton Stilleri */
+.button {
+    -fx-background-color: #2D89EF;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-background-radius: 5;
+    -fx-border-color: transparent;
+    -fx-font-weight: bold;  /* ✅ HATA VERMEYECEK! */
+}
+
+.button:hover {
+    -fx-background-color: #1B6AC9;
+}
+
+/* Tablo Görünümü */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #2D89EF;
+}
+
+.table-view .column-header {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;  /* ✅ HATA VERMEYECEK! */
+}
+
+/* TextField ve PasswordField Stilleri */
+.text-field, .password-field {
+    -fx-border-color: #BBBBBB;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4;
+    -fx-padding: 6px;
+    -fx-font-size: 14px;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-weight: normal; /* ✅ HATA VERMEYECEK! */
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #2D89EF;
+    -fx-background-color: #F0F8FF;
+}
+
+/* AnchorPane Stili */
+.anchor-pane {
+    -fx-padding: 20px;
+    -fx-background-color: #FFFFFF;
+}
